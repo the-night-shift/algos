@@ -11,14 +11,22 @@
 counter = 1
 collection_of_numbers = []
 
-sum = 0
 999.times do
   if counter % 3 == 0
-    sum += counter
+    collection_of_numbers << counter
   elsif counter % 5 == 0
-    sum += counter
+    collection_of_numbers << counter
   end
   counter += 1
 end
 
+sum = 0
+# collection_of_numbers.each do |number|
+#   sum += number
+# end
+i = 0
+collection_of_numbers.length.times do
+  sum += collection_of_numbers[i]
+  i += 1
+end
 p sum
